@@ -31,6 +31,22 @@ b9El.addEventListener("click", handleClick);
 
 resetBtn.addEventListener("click", reset);
 
+//pick backdrop and messgageBox reference
+////irrespective of game functionality, starts here---
+const backdrop = document.getElementById("backdrop");
+const messageBox = document.getElementById("message-box");
+const messageBoxCloseBtn = document.getElementById("message-box-close-btn");
+backdrop.addEventListener("click", showMainApp);
+messageBoxCloseBtn.addEventListener("click", showMainApp);
+
+function showMainApp() {
+  backdrop.remove();
+  messageBox.remove();
+}
+//irrespective of game functionality, ends here---
+
+//game functionality starts from here
+
 //set current player to X  and winner to null --> to initate the game
 let currentPlayer = "X";
 let winner = null;
